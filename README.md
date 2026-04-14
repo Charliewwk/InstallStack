@@ -36,6 +36,7 @@ Ejecutar:
 ```bash
 chmod +x deploy.sh
 ./deploy.sh
+```
 
 🔧 Qué hace el script
 	1.	Carga entorno
@@ -76,10 +77,13 @@ Ollama              11434           Modelos locales
 	•	El script NO levanta el stack automáticamente
 
 Ejecutar manualmente:
+```bash
 docker compose up -d
-
+```
 o wrapper:
+```bash
 ~/up.sh
+```
 
 🌐 Hosts requeridos
 Agregar en clientes:
