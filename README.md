@@ -38,33 +38,34 @@ chmod +x deploy.sh
 ./deploy.sh
 ```
 
-🔧 Qué hace el script
-	1.	Carga entorno
-        •	Copia .env.stack → /srv/.env
-        •	Exporta variables automáticamente
-	2.	Configura sistema
-        •	Zona horaria
-        •	Limpieza de paquetes Docker previos
-	3.	Instala dependencias
-        •	Docker + Compose (repo oficial)
-        •	Herramientas base (git, curl, python, etc.)
-	4.	Provisiona estructura
-        •	Directorios para todos los servicios
-        •	Permisos y ownership
-	5.	Genera configuración
-        •	docker-compose.yml
-        •	odoo.conf
-        •	nginx.conf
-        •	openclaw.json
-        •	Dockerfile custom de Odoo
-	6.	SSL
-        •	Genera certificado autofirmado con SAN
-	7.	Integraciones
-        •	OnlyOffice ↔ Odoo
-        •	OpenClaw ↔ Ollama
-        •	Reverse proxy multi-host
+## 🔧 Qué hace el script
 
-🐳 Servicios incluidos
+1. Carga entorno
+        •Copia .env.stack → /srv/.env
+        •Exporta variables automáticamente
+2. Configura sistema
+        •Zona horaria
+        •Limpieza de paquetes Docker previos
+3. Instala dependencias
+        •Docker + Compose (repo oficial)
+        •Herramientas base (git, curl, python, etc.)
+4. Provisiona estructura
+        •Directorios para todos los servicios
+        •Permisos y ownership
+5. Genera configuración
+        •docker-compose.yml
+        •odoo.conf
+        •nginx.conf
+        •openclaw.json
+        •Dockerfile custom de Odoo
+6. SSL
+        •Genera certificado autofirmado con SAN
+7. Integraciones
+        •OnlyOffice ↔ Odoo
+        •OpenClaw ↔ Ollama
+        •Reverse proxy multi-host
+
+## 🐳 Servicios incluidos
 Servicio            Puerto          Descripción
 Odoo                8069            ERP
 PostgreSQL          5432            Base de datos
@@ -73,8 +74,8 @@ OnlyOffice          80              Edición documentos
 OpenClaw            custom          Gateway IA
 Ollama              11434           Modelos locales
 
-🚫 Importante
-	•	El script NO levanta el stack automáticamente
+## 🚫 Importante
+	•El script NO levanta el stack automáticamente
 
 Ejecutar manualmente:
 ```bash
@@ -85,25 +86,25 @@ o wrapper:
 ~/up.sh
 ```
 
-🌐 Hosts requeridos
+## 🌐 Hosts requeridos
 Agregar en clientes:
 <IP_SERVIDOR> odoo.local docs.local claw.local (usando valores reales de tus variables)
 
 🔐 Seguridad
-	•	Certificado SSL autofirmado (solo testing / interno)
-	•	.env con permisos restrictivos (600)
-	•	PostgreSQL aislado en red interna
+        •Certificado SSL autofirmado (solo testing / interno)
+	•.env con permisos restrictivos (600)
+	•PostgreSQL aislado en red interna
 
 ⚠️ Consideraciones
-	•	Requiere relogin si se agrega usuario a grupo docker
-	•	No incluye backup automático (solo estructura)
-	•	Pensado para entornos controlados o staging
+	•Requiere relogin si se agrega usuario a grupo docker
+	•No incluye backup automático (solo estructura)
+	•Pensado para entornos controlados o staging
 
 🧩 Extensión
-Soporta fácilmente:
-	•	Addons custom en /extra-addons
-	•	Integración con CI/CD
-	•	Reemplazo de SSL por Let’s Encrypt
+Soporta:
+	•Addons custom en /extra-addons
+	•Integración con CI/CD
+	•Reemplazo de SSL por Let’s Encrypt
 
 
 
