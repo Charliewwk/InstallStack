@@ -91,20 +91,20 @@ Agregar en clientes:
 <IP_SERVIDOR> odoo.local docs.local claw.local (usando valores reales de tus variables)
 
 🔐 Seguridad
-        •Certificado SSL autofirmado (solo testing / interno)
-	•.env con permisos restrictivos (600)
-	•PostgreSQL aislado en red interna
+- Certificado SSL autofirmado (solo testing / interno)
+- .env con permisos restrictivos (600)
+- PostgreSQL aislado en red interna
 
 ⚠️ Consideraciones
-	•Requiere relogin si se agrega usuario a grupo docker
-	•No incluye backup automático (solo estructura)
-	•Pensado para entornos controlados o staging
+- Requiere relogin si se agrega usuario a grupo docker
+- No incluye backup automático (solo estructura)
+- Pensado para entornos controlados o staging
 
 🧩 Extensión
-Soporta:
-	•Addons custom en /extra-addons
-	•Integración con CI/CD
-	•Reemplazo de SSL por Let’s Encrypt
+- Soporta:
+        - Addons custom en /extra-addons
+        - Integración con CI/CD
+        - Reemplazo de SSL por Let’s Encrypt
 
 
 
