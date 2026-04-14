@@ -67,7 +67,6 @@ chmod +x deploy.sh
 
 ## 🐳 Servicios incluidos
 
-
 | Servicio | Puerto | Descripción |
 | :--- | :---: | ---: |
 |Odoo | 8069 | ERP |
@@ -78,7 +77,7 @@ chmod +x deploy.sh
 | Ollama| 11434 | Modelos locales |
 
 ## 🚫 Importante
-	•El script NO levanta el stack automáticamente
+- El script NO levanta el stack automáticamente
 
 Ejecutar manualmente:
 ```bash
