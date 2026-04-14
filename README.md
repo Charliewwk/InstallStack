@@ -66,13 +66,16 @@ chmod +x deploy.sh
         •Reverse proxy multi-host
 
 ## 🐳 Servicios incluidos
-Servicio            Puerto          Descripción
-Odoo                8069            ERP
-PostgreSQL          5432            Base de datos
-Nginx               80/443          Proxy + SSL
-OnlyOffice          80              Edición documentos
-OpenClaw            custom          Gateway IA
-Ollama              11434           Modelos locales
+
+
+| Servicio | Puerto | Descripción |
+| :--- | :---: | ---: |
+|Odoo | 8069 | ERP |
+| PostgreSQL | 5432 | Base de datos |
+| Nginx | 80/443 |Proxy + SSL |
+| OnlyOffice | 80 | Edición documentos |
+| OpenClaw | custom | Gateway IA |
+| Ollama| 11434 | Modelos locales |
 
 ## 🚫 Importante
 	•El script NO levanta el stack automáticamente
